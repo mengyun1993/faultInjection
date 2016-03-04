@@ -1,8 +1,8 @@
 #FILEPATH = "./Samples/test2.v"
 #FILEPATH = "./Samples/c432.v"
-#FILEPATH = "./Samples/b02.v"
+FILEPATH = "./Samples/b02.v"
 #FILEPATH = "./Samples/test2new.v"
-FILEPATH = "./Samples/4gate.v"
+#FILEPATH = "./Samples/4gate.v"
 
 import time
 from datetime import timedelta

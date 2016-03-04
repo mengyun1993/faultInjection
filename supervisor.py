@@ -133,9 +133,9 @@ class Supervisor:
 			rOutputs = self.rResolver.resolve(inputs)
 
 		regValue = {}
-		#print("length of outputs = ", len(rOutputs),"\n")
-##		for reg in self.rBoard.wires:
-##			regValue[reg] = self.rResolver.regsolve(reg,inputs)
+		#print("length of regValue = ", len(regValue),"\n")
+		for reg in self.rBoard.wires:
+			regValue[reg] = self.rResolver.regsolve(reg,inputs)
 ##			print("reg:",reg,"regValue:",regValue[reg],"\n") #20160302 test
 		#for regv in regValue:
 		for regv in self.rBoard.registers:
