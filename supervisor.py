@@ -159,9 +159,18 @@ class Supervisor:
 		fvector = ""
 		for i in range(length):
 			fOutputs = self.fResolver.resolve(inputs, errorVector, self.modifier)
+		regError = {}
+		for reg in self.fBoard.registers:
+                        regError[reg] = self.fResolver.regsolve(reg, inputs, errorVector, self.modifier)
+                for regv in self.fBoard.registers:
+                        ferror.write(str(regError[regv]))
+                        ferror.write(' ')
+                        
 		for fOutput in fOutputs:
-			fvector += str(fOutputs[fOutput])
-		ferror.write(fvector)
+                        ferror.write(str(fOutputs[fOutput]))
+                        ferror.write(' ')
+##			fvector += str(fOutputs[fOutput])
+##		ferror.write(fvector)
 		ferror.write('\n')
 		ferror.close
 		
